@@ -32,3 +32,5 @@ const useStore = create<State>((set, _) => ({
     set({ editedNote: { id: '', title: '', content: '' } }),
   resetEditedComment: () => set({ editedComment: { id: '', content: '' } }),
 }))
+
+export default useStore
