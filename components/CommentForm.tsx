@@ -30,17 +30,13 @@ export const CommentForm: FC<{ noteId: string }> = ({ noteId }) => {
 
   return (
     <form onSubmit={submitHandler}>
-      <div>
-        <input
-          type="text"
-          className="my-2 rounded border border-gray-300 px-3 py-2 text-sm placeholder-gray-500 focus:border-indigo-500 focus:outline-none"
-          placeholder="new comment"
-          value={editedComment.content}
-          onChange={(e) =>
-            update({ ...editedComment, content: e.target.value })
-          }
-        />
-      </div>
+      <input
+        type="text"
+        className="my-2 rounded border border-gray-300 px-3 py-2 text-sm placeholder-gray-500 focus:border-indigo-500 focus:outline-none"
+        placeholder="new comment"
+        value={editedComment.content}
+        onChange={(e) => update({ ...editedComment, content: e.target.value })}
+      />
       <button
         type="submit"
         className="ml-2 rounded bg-indigo-600 px-3 py-3 text-sm font-medium text-white hover:bg-indigo-700"

@@ -14,7 +14,7 @@ export default async function handler(
   } = req
   let revalidated = false
   try {
-    await res.unstable_revalidate(`/notes/${id}`)
+    await res.unstable_revalidate(`/note/${id}`)
     revalidated = true
   } catch (err) {
     console.log(err)
